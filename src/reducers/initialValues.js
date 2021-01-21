@@ -1,0 +1,48 @@
+export const initialState = {
+  coinsList: [],
+  updatedCoinsList: [],
+  currenciesList: [],
+  coinDetails: {
+    image: {
+      large: null,
+    },
+    market_data: {
+      current_price: {usd: ''},
+      price_change_24h: 0,
+      price_change_percentage_24h: 0,
+      price_change_percentage_7d: 0,
+      price_change_percentage_14d: 0,
+      price_change_percentage_30d: 0,
+      price_change_percentage_60d: 0,
+      price_change_percentage_200d: 0,
+      price_change_percentage_1y: 0,
+    },
+    last_updated: '',
+    links: {
+      homepage: [],
+    },
+    genesis_date: '',
+    sentiment_votes_up_percentage: 0,
+    sentiment_votes_down_percentage: 0,
+    ico_data: {
+      quote_public_sale_currency: 0,
+      quote_public_sale_amount: 0,
+    },
+    market_cap_rank: 0,
+    coingecko_rank: 0,
+    coingecko_score: 0,
+    developer_score: 0,
+    community_score: 0,
+    liquidity_score: 0,
+    public_interest_score: 0,
+    community_data: {
+      facebook_likes: null,
+      twitter_followers: null,
+      reddit_average_posts_48h: null,
+      reddit_average_comments_48h: null,
+      reddit_subscribers: null,
+      reddit_accounts_active_48h: null,
+      telegram_channel_user_count: null,
+    },
+  },
+};
