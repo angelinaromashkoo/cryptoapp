@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   FlatList,
   View,
@@ -37,7 +37,7 @@ const MainScreen = ({navigation, getSimpleListCoins, coinsList}) => {
     getSimpleListCoins('usd').finally(() => setIsRefreshing(false));
   };
 
-  const renderItem = useCallback(({item}) => {
+  const renderItem = ({item}) => {
     const colorChange =
       item.price_change_24h < 0 ? {color: 'red'} : {color: 'green'};
     return (
@@ -68,7 +68,7 @@ const MainScreen = ({navigation, getSimpleListCoins, coinsList}) => {
         </View>
       </TouchableOpacity>
     );
-  }, []);
+  };
 
   const alphabetData = alphabetical ? alphabeticalFilter(coinsList) : coinsList;
   return (
